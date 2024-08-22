@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>To-Do List</h1>
+    </div>
+    <div class="input-row">
+      <input type="text" id="input" placeholder="Enter a new task" maxlength="150">
+      <div class="image"><img src="images/add_icon.png" alt="Add" class="add" ></div>
+    </div>
+    <p class="alert"></p>
+    <div class="status-row">
+      <button onclick="filterTasks('all')" id="allBtn" class="status-btn active">All </button>
+      <button onclick="filterTasks('assigned')" id="assignedBtn" class="status-btn">Assigned </button>
+      <button onclick="filterTasks('completed')" id="completedBtn" class="status-btn">Completed </button>
+      <div class="line"></div>
+    </div>
+    <div class="task-wrap">
+      <div class="empty"><img src="images/empty.png" alt="No tasks found" class="default"></div>
+      <ul class="task-list">
+      </ul>
+    </div>
+    <div class="foot">
+      <div class="task-counter"> You have <span id="task-counter">0</span> task to complete! </div>
+      <div class="del"><button onclick="clearAllTasks()">Clear all</button></div>
+    </div>
+    <script src="./main.js"></script>
+  </div>
+</body>
+</html>
